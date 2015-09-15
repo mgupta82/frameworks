@@ -10,7 +10,7 @@ public class TestServiceTest {
 		ServiceFactory serviceFactory = new ServiceFactory();
 		TestService testService = (TestService) serviceFactory.getService(TestService.class);
 		Assert.assertNotNull(testService);
-		Assert.assertEquals(testService.getData(), "select id,name from txn");
+		Assert.assertEquals(testService.getData(new Integer(1)), "select id,name from txn where id=?");
 	}
 
 }

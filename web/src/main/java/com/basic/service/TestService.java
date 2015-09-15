@@ -2,8 +2,8 @@ package com.basic.service;
 
 public interface TestService {
 	
-	public String getData();
+	public String getData(Integer id);
 	
-	public void setData();
+	public void setData(Integer id, String name);
 
 }

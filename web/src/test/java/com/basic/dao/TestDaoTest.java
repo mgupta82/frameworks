@@ -11,14 +11,14 @@ public class TestDaoTest {
 	public void testGetData(){
 		DaoFactory daoFactory = new DaoFactory();
 		TestDao testDao = daoFactory.getDaoImpl(TestDao.class);
-		Assert.assertEquals(testDao.getData(), "select id,name from txn");
+		Assert.assertEquals(testDao.getData(new Integer(1)), "select id,name from txn where id=?");
 	}	
 	
 	@Test
 	public void testSetData(){
 		DaoFactory daoFactory = new DaoFactory();
 		TestDao testDao = daoFactory.getDaoImpl(TestDao.class);
-		testDao.setData();
+		testDao.setData(new Integer(2),"Two");
 	}		
 
 }

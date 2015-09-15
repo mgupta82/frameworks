@@ -2,10 +2,10 @@ package com.basic.dao;
 
 public interface TestDao {
 	
-	@DbQuery(query = "select id,name from txn" )
-	public String getData();
+	@DbQuery(query = "select id,name from txn where id=?" )
+	public String getData(Integer id);
 	
-	@DbQuery(query = "insert into txn(id,name) values(2,'Two');" )
-	public void setData();
+	@DbQuery(query = "insert into txn(id,name) values(?,?);" )
+	public void setData(Integer id, String name);
 
 }
