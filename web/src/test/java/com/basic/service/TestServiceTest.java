@@ -11,7 +11,6 @@ public class TestServiceTest {
 		TestService testService = (TestService) serviceFactory.getService(TestService.class);
 		Assert.assertNotNull(testService);
 		Assert.assertEquals(testService.getData(), "select id,name from txn");
-		
 	}
 
 }

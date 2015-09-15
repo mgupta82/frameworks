@@ -13,5 +13,12 @@ public class TestDaoTest {
 		TestDao testDao = daoFactory.getDaoImpl(TestDao.class);
 		Assert.assertEquals(testDao.getData(), "select id,name from txn");
 	}	
+	
+	@Test
+	public void testSetData(){
+		DaoFactory daoFactory = new DaoFactory();
+		TestDao testDao = daoFactory.getDaoImpl(TestDao.class);
+		testDao.setData();
+	}		
 
 }
