@@ -1,7 +1,7 @@
 # Basic j2ee app
 Create Maven Project
 
-mvn archetype:generate -DgroupId=com.basic -DartifactId=web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.basic -DartifactId=lean -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 
 Create database named train in mysql
 
