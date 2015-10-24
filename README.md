@@ -1,8 +1,6 @@
 # Requirements
 We need to create Basic J2EE project having layered architecture without using third party frameworks like Spring, Hibernate or struts.
 
-Create Toy Robot exposing Web Services
-
 # Solution Overview
 ##DAO Layer
 We will use annotations in DAO layer for specifying the queries. We will use Proxy pattern for calling the DAO methods
@@ -19,8 +17,6 @@ We will use Jersey Rest framework.
 # Technical Setup
 ##Create Maven Project
 mvn archetype:generate -DgroupId=com.basic -DartifactId=lean -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
-##Create Maven Project
-mvn archetype:generate -DgroupId=com.test -DartifactId=webapi -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 
 ##Database Setup
 1. Create database named train in mysql
