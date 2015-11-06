@@ -1,0 +1,307 @@
+<project>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.maxis.gamingportal.mgap</groupId>
+   <artifactId>gamingportal</artifactId>
+   <packaging>ear</packaging>
+   <name>ear assembly</name>
+   <parent>
+      <groupId>com.maxis.gamingportal</groupId>
+      <artifactId>mgap</artifactId>
+      <version>1.0</version>
+   </parent>
+   <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- jstl -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
+	<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>1.1.2</version>
+	</dependency>
+    <!-- Spring jars -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>4.1.2.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.ldap</groupId>
+		<artifactId>spring-ldap-core</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-ldap</artifactId>
+		<version>3.2.5.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>3.2.5.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+    </dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>3.2.5.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>4.1.2.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>			
+	</dependency>	
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjweaver</artifactId>
+		<version>1.8.4</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>
+	<!-- Logging jars -->    
+   <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.0</version>
+      <scope>runtime</scope>
+   </dependency>
+   <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.0</version>
+      <scope>runtime</scope>
+   </dependency>
+   <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.0</version>
+      <scope>runtime</scope>
+   </dependency>
+   <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.14</version>
+   </dependency>
+   <!-- Tiles -->
+	<dependency>
+	    <groupId>org.apache.tiles</groupId>
+	    <artifactId>tiles-extras</artifactId>
+	    <version>3.0.5</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-jsp</artifactId>
+			</exclusion>
+		</exclusions>    
+	</dependency>
+	<!-- Commons Configurations -->
+	<dependency>
+		<groupId>commons-configuration</groupId>
+		<artifactId>commons-configuration</artifactId>
+		<version>1.10</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springmodules</groupId>
+		<artifactId>spring-modules-jakarta-commons</artifactId>
+		<version>0.8</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<!-- IBM jars -->
+    <dependency>
+      <groupId>com.ibm.tools.target</groupId>
+      <artifactId>was</artifactId>
+      <version>8.5.5</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>	
+    
+    <!-- From report -->
+    
+    <!-- dependency>
+        <groupId>org.springframework.batch</groupId>
+        <artifactId>spring-batch-core</artifactId>
+        <version>3.0.2.RELEASE</version>
+        <optional>true</optional>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>	        
+    </dependency-->
+
+     <!-- JSON -->
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-core</artifactId>
+	<version>2.4.4</version>
+
+</dependency>
+
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>2.4.4</version>
+
+</dependency>
+
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-annotations</artifactId>
+	<version>2.4.4</version>
+
+</dependency>
+    
+<!-- From DAO -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>4.1.2.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>4.1.2.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.ldap</groupId>
+		<artifactId>spring-ldap-core</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<exclusions>
+			<exclusion>
+			<artifactId>commons-logging</artifactId>
+			<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>		
+	</dependency>	
+	  <dependency>
+		<groupId>com.microsoft.sqlserver</groupId>
+		<artifactId>sqljdbc4</artifactId>
+		<version>4.0</version>
+		<scope>runtime</scope> 
+	  </dependency>	
+	  
+    <!-- Project jars -->		
+    <dependency>
+      <groupId>com.maxis.gamingportal.mgap</groupId>
+      <artifactId>service</artifactId>
+	  <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.maxis.gamingportal.mgap</groupId>
+      <artifactId>dao</artifactId>
+	  <type>jar</type>
+    </dependency>	  	    
+   
+   <!-- missed --> 
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>4.1.2.RELEASE</version>
+	</dependency>    
+   
+	  <dependency>
+         <groupId>com.maxis.gamingportal.mgap</groupId>
+         <artifactId>web</artifactId>
+         <type>war</type>
+      </dependency>
+      <dependency>
+         <groupId>com.maxis.gamingportal.mgap</groupId>
+         <artifactId>report</artifactId>
+         <type>war</type>
+      </dependency>
+   </dependencies>
+   <build>
+      <plugins>
+         <plugin>
+            <artifactId>maven-ear-plugin</artifactId>
+            <configuration>
+               <defaultLibBundleDir>lib/</defaultLibBundleDir>
+               <skinnyWars>true</skinnyWars>
+               <archive>
+                  <manifest>
+                     <addClasspath>true</addClasspath>
+                  </manifest>
+               </archive>
+            </configuration>
+         </plugin>
+		   <!-- plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-eclipse-plugin</artifactId>
+			<version>2.9</version>
+			<configuration>
+			  <projectNameTemplate>gamingportal-1.0</projectNameTemplate>
+			  <wtpmanifest>true</wtpmanifest>
+			  <wtpapplicationxml>true</wtpapplicationxml>
+			  <wtpversion>2.0</wtpversion>
+			  <manifest>${basedir}/src/main/resources/META-INF/MANIFEST.MF</manifest>
+			</configuration>
+		  </plugin--> 
+		 </plugins>
+   </build>
+</project>
