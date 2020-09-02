@@ -2,3 +2,7 @@
 **/*.jar
 **/*target/**/*
 **/*/target/
+**/*settings/**/*
+**/*/settings/
+.project
+.classpath
